@@ -1,0 +1,93 @@
+/*Variables*/
+:root{
+    --color-text-btn: #1F5991;
+    --color-bg-btn-hover-pantallaArriba: #FFEDD9;
+    --color-bg-btn-hover-pantallaAbajo: #FFD574;
+    --color-border-elements:#8E9CAD;
+    --color-bg-calculador: #EAD390;
+    --color-border-calculador: #EAD390;
+    --color-bg-btn-close: #E044343;
+    --color-icon-maximize: #898989;
+    --color-bg-btn-minimize-hover:#3665B3;
+}
+
+/*Se empiezan a agregar los estilos para la clase calculadora*/
+.calculador{
+    border: 5px solid var(--color-border-calculador);
+    border-top-width: 0;
+    background-color: var(--color-bg-calculador);
+    max-width: 270px;
+    margin: 50px auto 0;
+    box-shadow: 0 0 1px var(--color-border-elements), 0 0 3px var(--color-border-elements);
+    padding-top: 12px;
+}
+
+.pantalla, .botonteclado{
+    border: 1px solid var(--color-border-elements);
+    border-radius: 3px;
+}
+
+.pantalla{
+    margin: 12px 12px 6px;
+    background-image: linear-gradient(var(--color-bg-calculador), white);
+    padding-bottom: 6px;
+    padding-top: 3px;
+}
+
+.pantallaArriba, .pantallaAbajo{
+    display: block;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: right;
+    border: none;
+    background-color: transparent;
+    max-width: 100%;
+}
+/*Estilos de la pantalla superior*/
+.pantallaArriba{
+    font-size: 20px;
+    height: 23px;
+}
+
+/*Estilos de la pantalla inferior*/
+.pantallaAbajo{
+    font-size: 35px;
+    font-weight: bold;
+    height: 40px;
+    margin-left: -10px;
+}
+
+/*Estilos para el teclado*/
+.teclado{
+    margin: 0 12px 12px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*Estilos a los botones del teclado de clase .botonteclado*/
+.botonteclado{
+    width: 54.5px;
+    height: 54px;
+    text-transform: uppercase;
+    transition: .1s all linear;
+}
+
+/*Al momento de pasar el cursor sobre las teclas se notará un color*/
+.botonteclado:hover {
+    background-image: linear-gradient(var(--color-bg-btn-hover-pantallaArriba)), var(--color-bg-btn-hover-pantallaAbajo);
+    box-shadow: 0 0 2px 1px var(--color-bg-btn-hover-pantallaAbajo);
+
+}
+
+.botonteclado:not(:nth-child(4)):not(:nth-child(8)):not(:nth-child(12)):not(:nth-child(16)):not(:nth-child(19)){
+    margin-right: 6px;
+}
+
+.botonteclado:not(:nth-child(17)):not(:nth-child(18)):not(:nth-child(19)){
+    margin-bottom: 6px;
+}
+
+.botonteclado:nth-child(17){
+    width: 115px;
+
+}
